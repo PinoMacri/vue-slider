@@ -34,6 +34,7 @@
                 <h2 v-for="(immagine , i) in immagini" v-text="immagine.title"
                     v-bind:class="i === currentIndex ? 'active' : 'd-none' ">
                 </h2>
+
                 <p v-for="(immagine , i) in immagini" v-text="immagine.text"
                     v-bind:class="i === currentIndex ? 'active' : 'd-none' ">
                 </p>
