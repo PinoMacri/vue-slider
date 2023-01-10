@@ -31,18 +31,21 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        goToNext(){
+        goToNext() {
             this.currentIndex++
-            if (this.currentIndex===this.immagini.length){
+            if (this.currentIndex === this.immagini.length) {
                 this.currentIndex = 0
             }
-        } ,
-        goToPrev(){
+        },
+        goToPrev() {
             this.currentIndex--
-            if (this.currentIndex < 0){
-                this.currentIndex = this.immagini.length -1
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.immagini.length - 1
             }
-        } ,
+        },
+        changeImage(target) {
+            this.currentIndex = target
+        }
     },
 })
 app.mount("#contenitore")

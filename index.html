@@ -28,7 +28,7 @@
             <div id="padreImg" class="padreImages">
 
                 <img v-for="(immagine , i) in immagini" v-bind:src="immagine.image" v-bind:alt="immagine.title"
-                    v-bind:class="i === currentIndex ? 'active' : 'd-none' ">
+                    v-bind:class="i === currentIndex? 'active' : 'd-none' ">
                     
 
                 <h2 v-for="(immagine , i) in immagini" v-text="immagine.title"
@@ -47,7 +47,8 @@
 
         <div id="thumb" class="thumbles d-flex flex-wrap gap-4 justify-content-center">
             <img v-for="(immagine , i) in immagini" v-bind:src="immagine.image" alt=""
-                v-bind:class="i === currentIndex ? 'personalizzazioneThumb' : ' opacity ' ">
+                v-bind:class="i === currentIndex ? 'personalizzazioneThumb' : ' opacity ' "
+                v-on:click="changeImage(i)">
         </div>
     </div>
 
