@@ -43,9 +43,6 @@ const app = Vue.createApp({
                 this.currentIndex = this.immagini.length - 1
             }
         },
-        changeImage(target) {
-            this.currentIndex = target
-        }
     },
 })
 app.mount("#contenitore")

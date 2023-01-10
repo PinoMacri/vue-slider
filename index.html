@@ -48,7 +48,7 @@
         <div id="thumb" class="thumbles d-flex flex-wrap gap-4 justify-content-center">
             <img v-for="(immagine , i) in immagini" v-bind:src="immagine.image" alt=""
                 v-bind:class="i === currentIndex ? 'personalizzazioneThumb' : ' opacity ' "
-                v-on:click="changeImage(i)">
+                v-on:click="currentIndex = i">
         </div>
     </div>
 
