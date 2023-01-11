@@ -28,6 +28,9 @@ const app = Vue.createApp({
         return {
             currentIndex: 0,
             immagini,
+            autoPlay: setInterval(() => {
+                this.goToNext();
+            }, 3000),
         }
     },
     methods: {
@@ -42,6 +45,9 @@ const app = Vue.createApp({
             if (this.currentIndex < 0) {
                 this.currentIndex = this.immagini.length - 1
             }
+        },
+        stopAutoplay() {
+            clearInterval(this.autoPlay);
         },
     },
 })
